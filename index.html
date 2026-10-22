@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Website Wireframe Kit (Black &amp; White)</title>
+<style>
+:root{--ink:#000;--paper:#fff;--g1:#f2f2f2;--g2:#d9d9d9;--g3:#8c8c8c}
+*{box-sizing:border-box;margin:0}
+body{font:16px/1.5 Georgia,"Times New Roman",serif;color:var(--ink);background:var(--g1)}
+h1,h2,h3,button,.btn,nav,.tag,.note{font-family:"Helvetica Neue",Arial,sans-serif}
+.top{background:var(--ink);color:var(--paper);padding:28px 24px}
+.brand{display:flex;align-items:center;gap:16px;margin-bottom:20px;font:700 22px/1.15 "Helvetica Neue",Arial,sans-serif}
+.brand img{height:auto;max-width:42vw;border:2px solid #fff}
+.work{margin-top:14px!important;font:15px Arial,sans-serif;color:#fff!important}
+.work a{color:#fff;font-weight:700}
+.top h1{font-size:26px;font-weight:700}
+.top p{color:var(--g2);max-width:60ch;margin-top:6px;font-size:15px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;padding:16px 24px;background:var(--paper);border-bottom:2px solid var(--ink);position:sticky;top:0;z-index:5}
+.tabs button{border:2px solid var(--ink);background:var(--paper);padding:8px 14px;font-size:14px;font-weight:600;cursor:pointer}
+.tabs button[aria-selected=true]{background:var(--ink);color:var(--paper)}
+.tabs button:focus-visible{outline:3px solid var(--g3);outline-offset:2px}
+.note{padding:12px 24px;font-size:13px;color:#444}
+.tpl{display:none;max-width:1000px;margin:0 auto 48px;background:var(--paper);border:2px solid var(--ink)}
+.tpl.on{display:block}
+section{position:relative;padding:44px 32px;border-bottom:1px dashed var(--g3)}
+section:last-child{border-bottom:0}
+.tag{position:absolute;top:8px;left:8px;font-size:11px;background:var(--g1);border:1px solid var(--g3);padding:1px 7px}
+nav{display:flex;align-items:center;gap:20px;padding:30px 32px 16px;border-bottom:2px solid var(--ink);position:relative}
+nav .logo{font-weight:700;margin-right:auto;border:2px solid var(--ink);padding:2px 12px}
+nav span{font-size:14px}
+h2{font-size:26px;margin-bottom:6px}
+h3{font-size:17px;margin-bottom:4px}
+p.sub{color:#444;max-width:55ch}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.hero.c{grid-template-columns:1fr;text-align:center;justify-items:center}
+.hero h2{font-size:40px;line-height:1.1;margin-bottom:12px}
+.btn{display:inline-block;background:var(--ink);color:var(--paper);padding:11px 22px;font-weight:700;font-size:15px;margin-top:16px}
+.btn.o{background:var(--paper);color:var(--ink);border:2px solid var(--ink);margin-left:8px}
+.img{background:linear-gradient(to top right,transparent calc(50% - 1px),var(--g3),transparent calc(50% + 1px)),linear-gradient(to bottom right,transparent calc(50% - 1px),var(--g3),transparent calc(50% + 1px)),var(--g1);border:2px solid var(--ink);min-height:200px;display:grid;place-items:center;font:600 13px Arial,sans-serif;color:#444}
+.img b{background:var(--paper);padding:2px 8px;border:1px solid var(--g3)}
+.img.s{min-height:110px}.img.t{min-height:260px}.img.r{border-radius:50%;width:72px;min-height:72px;height:72px}
+.grid{display:grid;gap:18px;margin-top:20px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.box{border:2px solid var(--ink);padding:18px}
+.box.hl{background:var(--ink);color:var(--paper)}
+.logos{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+.logos i{width:110px;height:34px;background:var(--g2);display:block}
+.cta{background:var(--ink);color:var(--paper);text-align:center}
+.cta .btn{background:var(--paper);color:var(--ink)}
+.cta p{color:var(--g2)}
+.center{text-align:center}.center p.sub{margin:0 auto}
+.faq div{border-bottom:1px solid var(--ink);padding:12px 0;font-family:Arial,sans-serif;font-weight:600}
+.faq div:before{content:"+ ";}
+footer{padding:26px 32px;display:flex;gap:28px;flex-wrap:wrap;font:14px Arial,sans-serif;background:var(--g1);border-top:2px solid var(--ink)}
+footer b{margin-right:auto}
+.split{display:grid;grid-template-columns:2fr 1fr;gap:28px}
+.row{display:flex;gap:12px;align-items:center}
+.input{border:2px solid var(--ink);padding:10px 12px;font:14px Arial,sans-serif;color:#666;flex:1}
+.price{font:700 28px Arial,sans-serif}
+.price+p{font-size:14px}
+ul.l{list-style:none;padding:0;font:14px Arial,sans-serif}
+ul.l li{padding:4px 0;border-bottom:1px solid var(--g2)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.chips span{border:1px solid var(--ink);padding:3px 12px;font:13px Arial,sans-serif}
+.dl{display:inline-block;border:2px solid #fff;background:#fff;color:#000;padding:12px 24px;font:700 16px Arial,sans-serif;cursor:pointer;margin-top:18px}
+.dl:hover{background:#000;color:#fff}
+.dl:focus-visible{outline:3px solid #8c8c8c;outline-offset:3px}
+.dlbar{max-width:1000px;margin:0 auto 48px;padding:32px;text-align:center;background:#000;color:#fff;border:2px solid #000;font-family:Arial,sans-serif}
+.dlbar h2{margin-bottom:6px}.dlbar p{color:#d9d9d9}
+.msg{font:13px Arial,sans-serif;margin-top:10px;min-height:18px}
+.ph{background:#d9d9d9 center/cover;filter:grayscale(1);border:2px solid #000;min-height:200px}
+.ph.s{min-height:110px;width:160px;flex:none}.ph.t{min-height:260px}.ph.r{border-radius:50%;width:56px;height:56px;min-height:56px;flex:none}
+.ex{margin:24px 20px;border:2px solid #000}
+.exh{background:#000;color:#fff;padding:10px 16px;font:700 14px Arial,sans-serif}
+.c-coffee{background-image:url(images/coffee.jpg)}
+.c-cup{background-image:url(images/cup.jpg)}
+.c-spoon{background-image:url(images/spoon.jpg)}
+.c-flower{background-image:url(images/flower.jpg)}
+.c-bloom{background-image:url(images/bloom.jpg)}
+.c-catface{background-image:url(images/catface.jpg)}
+.c-catcrop{background-image:url(images/catcrop.jpg)}
+.c-china{background-image:url(images/china.jpg)}
+.c-pagoda{background-image:url(images/pagoda.jpg)}
+.c-lake{background-image:url(images/lake.jpg)}
+.c-rocket{background-image:url(images/rocket.jpg)}
+.c-tower{background-image:url(images/tower.jpg)}
+@media(max-width:720px){.hero,.g2,.g3,.g4,.split{grid-template-columns:1fr}.hero h2{font-size:30px}nav span{display:none}section{padding:40px 18px}}
+@media print{.dl,.dlbar,.tabs,.top,.note{display:none}.tpl{display:block!important;break-after:page;margin:0 0 20px}}
+</style>
+</head>
+<body>
+<header class="top">
+<div class="brand"><img src="images/logo.jpg" alt="Gatekeepingstudio logo" width="200"><b>Gatekeeping<br>studio</b></div>
+<h1>Free Website Wireframe Kit</h1>
+<p>Five black-and-white layouts for the most common types of website, plus filled-in examples with real photos and sample information at the end (see the Examples tab). Pick a tab, copy the structure, replace the grey boxes with your own words and images. Free to use, edit and share.</p>
+<button class="dl" type="button" data-dl>Download the free format</button>
+<p class="work">For work services: <a href="mailto:gatekeepingstudio@gmail.com">gatekeepingstudio@gmail.com</a></p>
+</header>
+<div class="tabs" role="tablist">
+<button role="tab" aria-selected="true" data-t="t1">Landing page</button>
+<button role="tab" aria-selected="false" data-t="t2">Business site</button>
+<button role="tab" aria-selected="false" data-t="t3">Portfolio</button>
+<button role="tab" aria-selected="false" data-t="t4">E-commerce</button>
+<button role="tab" aria-selected="false" data-t="t5">Blog</button>
+<button role="tab" aria-selected="false" data-t="t6">Examples</button>
+</div>
+<p class="note">Made by Gatekeepingstudio. For work services: <a href="mailto:gatekeepingstudio@gmail.com" style="color:#000;font-weight:700">gatekeepingstudio@gmail.com</a><br>Tip: save this file (Ctrl/Cmd + S) and open it in any browser. To keep a PDF of every template, use Print, then Save as PDF. Small grey labels show what each section is for.</p>
+
+<!-- 1 LANDING -->
+<main class="tpl on" id="t1">
+<nav><span class="logo">Logo</span><span>Features</span><span>Pricing</span><span>FAQ</span><a class="btn" style="margin:0">Get started</a></nav>
+<section><i class="tag">Hero: promise + one action</i>
+<div class="hero"><div><h2>Outcome you deliver, without the pain they hate</h2><p class="sub">One or two sentences that explain what it is and who it is for.</p><a class="btn">Start free trial</a><a class="btn o">See how it works</a><p class="sub" style="margin-top:12px;font-size:13px">Trusted by 2,000+ teams</p></div><div class="img t"><b>Product screenshot</b></div></div></section>
+<section class="center"><i class="tag">Social proof</i><p class="sub">Used by teams at</p><div class="logos"><i></i><i></i><i></i><i></i><i></i></div></section>
+<section><i class="tag">Problem and solution</i><div class="split"><div><h2>The problem your visitor feels today</h2><p class="sub">Describe the frustration in their words, then show the better way.</p></div><div class="img s"><b>Image</b></div></div></section>
+<section><i class="tag">Benefits</i><h2 class="center">What you get</h2><div class="grid g3"><div class="box"><div class="img r"></div><h3>Benefit one</h3><p class="sub">One short line.</p></div><div class="box"><div class="img r"></div><h3>Benefit two</h3><p class="sub">One short line.</p></div><div class="box"><div class="img r"></div><h3>Benefit three</h3><p class="sub">One short line.</p></div></div></section>
+<section><i class="tag">How it works: three steps</i><h2 class="center">Up and running in three steps</h2><div class="grid g3"><div><h3>1. Sign up</h3><p class="sub">Short description.</p></div><div><h3>2. Set up</h3><p class="sub">Short description.</p></div><div><h3>3. Get results</h3><p class="sub">Short description.</p></div></div></section>
+<section><i class="tag">Testimonials</i><h2 class="center">What customers say</h2><div class="grid g2"><div class="box"><p>"Specific result with a number, like cut setup time by 40%."</p><div class="row" style="margin-top:12px"><div class="img r" style="width:44px;height:44px;min-height:44px"></div><span>Name, role, company</span></div></div><div class="box"><p>"A second short quote that answers a common doubt."</p><div class="row" style="margin-top:12px"><div class="img r" style="width:44px;height:44px;min-height:44px"></div><span>Name, role, company</span></div></div></div></section>
+<section><i class="tag">Pricing</i><h2 class="center">Simple pricing</h2><div class="grid g3"><div class="box"><h3>Starter</h3><div class="price">$0</div><p>Per month</p><ul class="l"><li>Feature</li><li>Feature</li></ul></div><div class="box hl"><h3>Pro (recommended)</h3><div class="price">$19</div><p>Per month</p><ul class="l"><li>Everything in Starter</li><li>Feature</li></ul></div><div class="box"><h3>Team</h3><div class="price">$49</div><p>Per month</p><ul class="l"><li>Everything in Pro</li><li>Feature</li></ul></div></div></section>
+<section class="faq"><i class="tag">FAQ: answer objections</i><h2>Questions</h2><div>How much does it cost?</div><div>Can I cancel anytime?</div><div>Is my data safe?</div><div>How long does setup take?</div></section>
+<section class="cta"><i class="tag">Final call to action</i><h2>Ready to start?</h2><p>Repeat your promise in one line.</p><a class="btn">Start free trial</a></section>
+<footer><b>Logo</b><span>Product</span><span>Company</span><span>Privacy</span><span>Terms</span></footer>
+</main>
+
+<!-- 2 BUSINESS -->
+<main class="tpl" id="t2">
+<nav><span class="logo">Company</span><span>Home</span><span>Services</span><span>About</span><span>Contact</span><a class="btn" style="margin:0">Get a quote</a></nav>
+<section><i class="tag">Hero: who you help</i><div class="hero"><div><h2>We help [customer] achieve [result]</h2><p class="sub">A short statement of what the company does and where.</p><a class="btn">Get a quote</a><a class="btn o">Our services</a></div><div class="img t"><b>Team or work photo</b></div></div></section>
+<section><i class="tag">Services: directory to inner pages</i><h2>What we do</h2><div class="grid g3"><div class="box"><h3>Service one</h3><p class="sub">Short line. Link to page.</p></div><div class="box"><h3>Service two</h3><p class="sub">Short line. Link to page.</p></div><div class="box"><h3>Service three</h3><p class="sub">Short line. Link to page.</p></div></div></section>
+<section><i class="tag">Why choose us</i><div class="grid g4"><div class="box center"><div class="price">15+</div><p>Years in business</p></div><div class="box center"><div class="price">500+</div><p>Projects done</p></div><div class="box center"><div class="price">4.9</div><p>Average rating</p></div><div class="box center"><div class="price">24h</div><p>Reply time</p></div></div></section>
+<section><i class="tag">About preview</i><div class="hero"><div class="img"><b>Photo</b></div><div><h2>Our story</h2><p class="sub">Two or three sentences about who you are and what you stand for.</p><a class="btn o" style="margin-left:0">Read more</a></div></div></section>
+<section><i class="tag">Reviews</i><h2>Client feedback</h2><div class="grid g2"><div class="box"><p>"Short client quote."</p><p class="sub">Name, company</p></div><div class="box"><p>"Short client quote."</p><p class="sub">Name, company</p></div></div></section>
+<section class="cta"><i class="tag">Contact call to action</i><h2>Tell us about your project</h2><div class="row" style="max-width:520px;margin:16px auto 0"><div class="input" style="background:#fff;color:#666">Your email</div><a class="btn" style="margin:0;background:#fff;color:#000">Send</a></div></section>
+<footer><b>Company</b><span>Address</span><span>Phone</span><span>Email</span><span>Social</span></footer>
+</main>
+
+<!-- 3 PORTFOLIO -->
+<main class="tpl" id="t3">
+<nav><span class="logo">Your Name</span><span>Work</span><span>About</span><span>Contact</span></nav>
+<section><i class="tag">Intro: who you are, in one line</i><h2 style="font-size:44px;line-height:1.1;max-width:18ch">I design [what] for [who].</h2><p class="sub" style="margin-top:10px">Based in [city]. Available for projects from [month].</p><a class="btn">Let's talk</a></section>
+<section><i class="tag">Selected work: images lead</i><div class="grid g2"><div><div class="img t"><b>Project 1</b></div><h3 style="margin-top:8px">Project name</h3><p class="sub">Type of work, year</p></div><div><div class="img t"><b>Project 2</b></div><h3 style="margin-top:8px">Project name</h3><p class="sub">Type of work, year</p></div><div><div class="img t"><b>Project 3</b></div><h3 style="margin-top:8px">Project name</h3><p class="sub">Type of work, year</p></div><div><div class="img t"><b>Project 4</b></div><h3 style="margin-top:8px">Project name</h3><p class="sub">Type of work, year</p></div></div></section>
+<section><i class="tag">About</i><div class="hero"><div class="img t"><b>Portrait</b></div><div><h2>About me</h2><p class="sub">A short, human paragraph on your background and how you work.</p><div class="chips"><span>Skill</span><span>Skill</span><span>Skill</span><span>Tool</span></div></div></div></section>
+<section class="cta"><i class="tag">Contact</i><h2>Have a project in mind?</h2><p>hello@yourname.com</p><a class="btn">Send a message</a></section>
+<footer><b>Your Name</b><span>Instagram</span><span>LinkedIn</span><span>Dribbble</span></footer>
+</main>
+
+<!-- 4 ECOMMERCE -->
+<main class="tpl" id="t4">
+<nav><span class="logo">Store</span><span>Shop</span><span>Sale</span><span>About</span><span>Cart (0)</span></nav>
+<section><i class="tag">Promo banner</i><div class="hero"><div><h2>New season, new arrivals</h2><p class="sub">Free shipping over $50.</p><a class="btn">Shop now</a></div><div class="img t"><b>Banner image</b></div></div></section>
+<section><i class="tag">Categories</i><h2>Shop by category</h2><div class="grid g4"><div><div class="img s"></div><h3 style="margin-top:6px">Category</h3></div><div><div class="img s"></div><h3 style="margin-top:6px">Category</h3></div><div><div class="img s"></div><h3 style="margin-top:6px">Category</h3></div><div><div class="img s"></div><h3 style="margin-top:6px">Category</h3></div></div></section>
+<section><i class="tag">Featured products</i><h2>Best sellers</h2><div class="grid g4"><div><div class="img"><b>Photo</b></div><h3 style="margin-top:6px">Product name</h3><p class="sub">$00.00</p></div><div><div class="img"><b>Photo</b></div><h3 style="margin-top:6px">Product name</h3><p class="sub">$00.00</p></div><div><div class="img"><b>Photo</b></div><h3 style="margin-top:6px">Product name</h3><p class="sub">$00.00</p></div><div><div class="img"><b>Photo</b></div><h3 style="margin-top:6px">Product name</h3><p class="sub">$00.00</p></div></div></section>
+<section><i class="tag">Product page detail</i><div class="hero"><div class="img t"><b>Main photo</b></div><div><h2>Product name</h2><p class="price">$00.00</p><p class="sub">Rating 4.8 (120 reviews)</p><div class="chips"><span>S</span><span>M</span><span>L</span></div><a class="btn">Add to cart</a><ul class="l" style="margin-top:14px"><li>Description</li><li>Shipping and returns</li><li>Reviews</li></ul></div></div></section>
+<section><i class="tag">Trust signals</i><div class="grid g3"><div class="box center"><h3>Free shipping</h3></div><div class="box center"><h3>30-day returns</h3></div><div class="box center"><h3>Secure checkout</h3></div></div></section>
+<section class="cta"><i class="tag">Newsletter</i><h2>Get 10% off your first order</h2><div class="row" style="max-width:520px;margin:16px auto 0"><div class="input" style="background:#fff">Your email</div><a class="btn" style="margin:0;background:#fff;color:#000">Join</a></div></section>
+<footer><b>Store</b><span>Help</span><span>Shipping</span><span>Returns</span><span>Contact</span></footer>
+</main>
+
+<!-- 5 BLOG -->
+<main class="tpl" id="t5">
+<nav><span class="logo">Blog</span><span>Articles</span><span>Topics</span><span>About</span><a class="btn" style="margin:0">Subscribe</a></nav>
+<section><i class="tag">Featured article</i><div class="hero"><div class="img t"><b>Cover image</b></div><div><p class="sub">Topic, 5 min read</p><h2>Featured article headline that earns the click</h2><p class="sub">Two-line excerpt that sets up the story.</p><a class="btn o" style="margin-left:0">Read article</a></div></div></section>
+<section><i class="tag">Latest articles + sidebar</i><div class="split"><div><h2>Latest</h2><div class="grid"><div class="row"><div class="img s" style="width:160px;flex:none"></div><div><h3>Article headline</h3><p class="sub">Short excerpt. Date, author.</p></div></div><div class="row"><div class="img s" style="width:160px;flex:none"></div><div><h3>Article headline</h3><p class="sub">Short excerpt. Date, author.</p></div></div><div class="row"><div class="img s" style="width:160px;flex:none"></div><div><h3>Article headline</h3><p class="sub">Short excerpt. Date, author.</p></div></div></div></div><aside><div class="input">Search</div><h3 style="margin-top:20px">Topics</h3><div class="chips"><span>Topic</span><span>Topic</span><span>Topic</span></div><div class="box hl" style="margin-top:20px"><h3>Newsletter</h3><p>One email a week.</p><a class="btn" style="background:#fff;color:#000">Subscribe</a></div></aside></div></section>
+<section><i class="tag">Single article layout</i><div style="max-width:640px;margin:0 auto"><h2 style="font-size:34px">Article title</h2><p class="sub">By Author, date, 6 min read</p><div class="img" style="margin:16px 0"><b>Cover image</b></div><p>Opening paragraph that states the point of the article in plain words.</p><h3 style="margin-top:16px">Subheading</h3><p>Body text in short paragraphs, around 60 to 75 characters per line.</p><div class="box" style="margin-top:16px"><h3>About the author</h3><p class="sub">One-line bio.</p></div></div></section>
+<footer><b>Blog</b><span>About</span><span>RSS</span><span>Privacy</span></footer>
+</main>
+
+<!-- 6 EXAMPLES -->
+<main class="tpl" id="t6"><section><h2>Filled-in examples</h2><p class="sub">The same five formats with real photos and sample information, so you can see how a finished page looks. All names, prices and numbers are made up. Replace the photos and text with your own.</p></section><div class="ex"><div class="exh">Example 1: Landing page (Brewly, a coffee subscription)</div><nav><span class="logo">Brewly</span><span>How it works</span><span>Pricing</span><span>FAQ</span><a class="btn" style="margin:0">Start my box</a></nav><section><div class="hero"><div><h2>Fresh coffee at your door, without the grocery run</h2><p class="sub">Small-batch beans roasted this week and delivered every two weeks. Skip or cancel anytime.</p><a class="btn">Start my first box</a><a class="btn o">See the beans</a><p class="sub" style="margin-top:12px;font-size:13px">Loved by 12,000 coffee fans</p></div><div class="ph c-coffee t" role="img" aria-label="Espresso cup on a wooden table"></div></div></section><section class="center"><p class="sub">As seen in</p><div class="logos"><i></i><i></i><i></i><i></i></div></section><section><h2 class="center">Why people switch</h2><div class="grid g3"><div class="box "><h3>Roasted to order</h3><p class="sub">Beans ship within 48 hours of roasting.</p></div><div class="box "><h3>Pick your taste</h3><p class="sub">Fruity, chocolatey or bold. Change it any time.</p></div><div class="box "><h3>Zero waste</h3><p class="sub">Compostable bags and a free bag-return label.</p></div></div></section><section><h2 class="center">Simple pricing</h2><div class="grid g3"><div class="box"><h3>Sampler</h3><div class="price">$14</div><p>Per box, 250 g</p></div><div class="box hl"><h3>Regular (most popular)</h3><div class="price">$24</div><p>Per box, 500 g</p></div><div class="box"><h3>Office</h3><div class="price">$58</div><p>Per box, 1.5 kg</p></div></div></section><section><div class="box"><p>"I stopped buying coffee out. The Regular box saves me about $40 a month."</p><div class="row" style="margin-top:12px"><div class="ph c-bloom r" role="img" aria-label="Profile picture"></div><span>Dana K., Austin</span></div></div></section><section class="cta"><h2>Your first box ships tomorrow</h2><p>Free shipping on orders over $20.</p><a class="btn">Start my first box</a></section><footer><b>Brewly</b><span>Help</span><span>Shipping</span><span>Privacy</span><span>hello@example.com</span></footer></div><div class="ex"><div class="exh">Example 2: Business site (Lotus Heritage Tours)</div><nav><span class="logo">Lotus Tours</span><span>Home</span><span>Tours</span><span>About</span><span>Contact</span><a class="btn" style="margin:0">Get a quote</a></nav><section><div class="hero"><div><h2>Small-group tours of China's great temples and gardens</h2><p class="sub">Local guides. Groups of 12 or fewer. Everything booked for you.</p><a class="btn">Get a free quote</a><a class="btn o">See tours</a></div><div class="ph c-china t" role="img" aria-label="Pagoda above a lake"></div></div></section><section><h2>Our tours</h2><div class="grid g3"><div class="box "><h3>Imperial Beijing</h3><p class="sub">5 days. Palaces, gardens and the Great Wall.</p></div><div class="box "><h3>Lakes and Gardens</h3><p class="sub">4 days. Slow walks, tea houses, boat rides.</p></div><div class="box "><h3>Private Tours</h3><p class="sub">Your dates, your pace, your guide.</p></div></div></section><section><div class="grid g4"><div class="box center"><div class="price">14</div><p>Years running tours</p></div><div class="box center"><div class="price">3,100</div><p>Guests hosted</p></div><div class="box center"><div class="price">4.9</div><p>Average rating</p></div><div class="box center"><div class="price">24h</div><p>Reply time</p></div></div></section><section><div class="hero"><div class="ph c-lake " role="img" aria-label="View over a lake"></div><div><h2>Guided by locals</h2><p class="sub">Every guide grew up in the cities we visit and is trained in history and first aid.</p></div></div></section><section class="cta"><h2>Tell us when you want to travel</h2><div class="row" style="max-width:520px;margin:16px auto 0"><div class="input" style="background:#fff">you@example.com</div><a class="btn" style="margin:0;background:#fff;color:#000">Send</a></div></section><footer><b>Lotus Heritage Tours</b><span>88 Garden Road, Beijing</span><span>+86 555 0142</span><span>info@example.com</span></footer></div><div class="ex"><div class="exh">Example 3: Portfolio (Maya Torres, photographer)</div><nav><span class="logo">Maya Torres</span><span>Work</span><span>About</span><span>Contact</span></nav><section><h2 style="font-size:44px;line-height:1.1;max-width:20ch">I photograph places, plants and quiet moments.</h2><p class="sub" style="margin-top:10px">Based in Lisbon. Booking projects from January.</p><a class="btn">Let's talk</a></section><section><div class="grid g2"><div><div class="ph c-pagoda t" role="img" aria-label="Morning at the Pavilion"></div><h3 style="margin-top:8px">Morning at the Pavilion</h3><p class="sub">Travel series, 2026</p></div><div><div class="ph c-flower t" role="img" aria-label="Dahlia Study"></div><h3 style="margin-top:8px">Dahlia Study</h3><p class="sub">Botanical series, 2025</p></div><div><div class="ph c-catface t" role="img" aria-label="Chelsea at Home"></div><h3 style="margin-top:8px">Chelsea at Home</h3><p class="sub">Pet portraits, 2025</p></div><div><div class="ph c-rocket t" role="img" aria-label="Night Launch"></div><h3 style="margin-top:8px">Night Launch</h3><p class="sub">Editorial, 2024</p></div></div></section><section><div class="hero"><div class="ph c-spoon t" role="img" aria-label="Detail of a coffee spoon"></div><div><h2>About me</h2><p class="sub">Eight years of freelance work for magazines, cafes and small studios. I shoot on film first, then finish on screen.</p><div class="chips"><span>Travel</span><span>Editorial</span><span>Portraits</span><span>Film</span></div></div></div></section><section class="cta"><h2>Have a project in mind?</h2><p>maya@example.com</p><a class="btn">Send a message</a></section><footer><b>Maya Torres</b><span>Instagram</span><span>Behance</span><span>Newsletter</span></footer></div><div class="ex"><div class="exh">Example 4: E-commerce store (Bloom &amp; Bean, flowers and coffee gifts)</div><nav><span class="logo">Bloom &amp; Bean</span><span>Shop</span><span>New</span><span>Sale</span><span>Cart (2)</span></nav><section><div class="hero"><div><h2>Autumn flowers and coffee, delivered</h2><p class="sub">Free shipping on orders over $50. 30-day returns.</p><a class="btn">Shop the collection</a></div><div class="ph c-flower t" role="img" aria-label="Orange dahlia flower"></div></div></section><section><h2>Best sellers</h2><div class="grid g4"><div><div class="ph c-cup " role="img" aria-label="Espresso Cup &amp; Saucer"></div><h3 style="margin-top:6px">Espresso Cup &amp; Saucer</h3><p class="sub">$26</p></div><div><div class="ph c-bloom " role="img" aria-label="Dahlia Bouquet"></div><h3 style="margin-top:6px">Dahlia Bouquet</h3><p class="sub">$38</p></div><div><div class="ph c-spoon " role="img" aria-label="Brass Spoon Set"></div><h3 style="margin-top:6px">Brass Spoon Set</h3><p class="sub">$18</p></div><div><div class="ph c-catcrop " role="img" aria-label="Tabby Cat Mug"></div><h3 style="margin-top:6px">Tabby Cat Mug</h3><p class="sub">$22</p></div></div></section><section><div class="hero"><div class="ph c-flower t" role="img" aria-label="Orange dahlia flower"></div><div><h2>Dahlia Bouquet</h2><p class="price">$38.00</p><p class="sub">Rating 4.8 (212 reviews)</p><div class="chips"><span>Small</span><span>Medium</span><span>Large</span></div><a class="btn">Add to cart</a><ul class="l" style="margin-top:14px"><li>Fresh-cut, delivered in 2 days</li><li>Includes a care card</li><li>Free replacement if damaged</li></ul></div></div></section><section><div class="grid g3"><div class="box center"><h3>Free shipping</h3><p class="sub">Orders over $50</p></div><div class="box center"><h3>30-day returns</h3><p class="sub">No questions asked</p></div><div class="box center"><h3>Secure checkout</h3><p class="sub">Cards and wallets</p></div></div></section><footer><b>Bloom &amp; Bean</b><span>Help</span><span>Shipping</span><span>Returns</span><span>shop@example.com</span></footer></div><div class="ex"><div class="exh">Example 5: Blog (Wander &amp; Wonder, a slow-travel blog)</div><nav><span class="logo">Wander &amp; Wonder</span><span>Articles</span><span>Topics</span><span>About</span><a class="btn" style="margin:0">Subscribe</a></nav><section><div class="hero"><div class="ph c-china t" role="img" aria-label="Pagoda above a lake"></div><div><p class="sub">Destinations, 6 min read</p><h2>A slow weekend beside a lake in China</h2><p class="sub">No schedule, one notebook, and the best tea of the year.</p><a class="btn o" style="margin-left:0">Read article</a></div></div></section><section><div class="split"><div><h2>Latest</h2><div class="grid"><div class="row"><div class="ph c-tower s" role="img" aria-label="Watching a night rocket launch in Florida"></div><div><h3>Watching a night rocket launch in Florida</h3><p class="sub">Oct 14, by Sam Reyes</p></div></div><div class="row"><div class="ph c-catcrop s" role="img" aria-label="What our rescue cat taught me about slow travel"></div><div><h3>What our rescue cat taught me about slow travel</h3><p class="sub">Oct 9, by Sam Reyes</p></div></div><div class="row"><div class="ph c-bloom s" role="img" aria-label="Where to find autumn flowers near the city"></div><div><h3>Where to find autumn flowers near the city</h3><p class="sub">Oct 2, by Jo Park</p></div></div></div></div><aside><div class="input">Search articles</div><h3 style="margin-top:20px">Topics</h3><div class="chips"><span>Destinations</span><span>Nature</span><span>Food</span></div><div class="box hl" style="margin-top:20px"><h3>Weekly letter</h3><p>One calm email every Sunday.</p><a class="btn" style="background:#fff;color:#000">Subscribe</a></div></aside></div></section><footer><b>Wander &amp; Wonder</b><span>About</span><span>RSS</span><span>Privacy</span></footer></div><section><h3>Photo credits</h3><p class="sub" style="font-size:14px">Real photographs, shown in black and white. Coffee cup: Rachel Michetti (CC0). Cat: Stefan van der Walt (CC0). Rocket launch: SpaceX (public domain). Temple and flower: Flickr users danielbuechele and vultilion (CC BY 2.0, creativecommons.org/licenses/by/2.0). To show them in colour, delete "filter:grayscale(1)" in the .ph style.</p></section></main>
+<div class="dlbar"><h2>Want to keep it forever?</h2><p>Download all five website formats for free. One file, works offline, yours to edit and reuse.</p><button class="dl" type="button" data-dl>Download the free format</button><p class="msg" aria-live="polite"></p></div>
+<script>
+const SRC='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+document.querySelectorAll('[data-dl]').forEach(b=>b.addEventListener('click',()=>{
+const m=document.querySelector('.msg');
+try{
+const a=document.createElement('a');
+a.href=URL.createObjectURL(new Blob([SRC],{type:'text/html'}));
+a.download='gatekeepingstudio-website-wireframe-kit.html';
+document.body.appendChild(a);a.click();a.remove();
+m.textContent='Downloading. Thank you! Questions? gatekeepingstudio@gmail.com';
+}catch(e){m.textContent='Press Ctrl/Cmd + S to save this page instead.'}
+}));
+
+const tabs=document.querySelectorAll('.tabs button');
+tabs.forEach(b=>b.addEventListener('click',()=>{
+tabs.forEach(x=>x.setAttribute('aria-selected',x===b));
+document.querySelectorAll('.tpl').forEach(t=>t.classList.toggle('on',t.id===b.dataset.t));
+window.scrollTo({top:0});
+}));
+
+</script>
+</body>
+</html>
